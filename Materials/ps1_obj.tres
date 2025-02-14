@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dlhip8hbhrg7e"]
+
+[ext_resource type="Shader" uid="uid://c2stnj60sg1wi" path="res://Shaders/ps1_obj.gdshader" id="1_xqdho"]
+[ext_resource type="Texture2D" uid="uid://cvkf2kdrriqvf" path="res://icon.svg" id="2_mprgy"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xqdho")
+shader_parameter/affine_mapping = false
+shader_parameter/albedo = ExtResource("2_mprgy")
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
