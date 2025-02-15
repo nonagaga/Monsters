@@ -225,7 +225,7 @@ void fragment()
 		float midpoint = pow(0.5, 2.2);
 		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
 	}
-	ALBEDO = text.rgb;
+	ALBEDO = vec3(0,text.g,text.b);
 	ALPHA = text.a;
-	EMISSION = text.rgb;
+	EMISSION = vec3(0,text.g,text.b);
 }

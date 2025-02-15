@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=30 format=3 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="PackedScene" uid="uid://btlexaneuc6va" path="res://Assets/exports/BrickBuilding.glb" id="2_2shtd"]
 [ext_resource type="AudioStream" uid="uid://dhquqwaelyfe8" path="res://Audio/factory-fluorescent-light-buzz-6871.mp3" id="2_s8dlv"]
 [ext_resource type="ArrayMesh" uid="uid://c3xaipa2khtvs" path="res://Assets/Saved Meshes/tv.res" id="3_io27d"]
+[ext_resource type="Script" uid="uid://bmyd0c3pd1chd" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_yl1pv"]
 [ext_resource type="Material" uid="uid://xfyyat7culq5" path="res://Materials/crt.tres" id="4_3ps1r"]
 [ext_resource type="PackedScene" uid="uid://dayxjhigv6n7m" path="res://Scenes/order_pov.tscn" id="4_fdj0q"]
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
@@ -16,6 +17,10 @@
 [ext_resource type="ArrayMesh" uid="uid://rd20r2mna4b1" path="res://Assets/Saved Meshes/sink.res" id="14_3568l"]
 [ext_resource type="ArrayMesh" uid="uid://cgs57a1cpekc6" path="res://Assets/Saved Meshes/table.res" id="15_0vsm1"]
 [ext_resource type="Texture2D" uid="uid://dv3crtunglp6a" path="res://Assets/- Classic 64 Asset Pack 0.6/Metal/Materials/metal_grunge_panel_01.png" id="15_3568l"]
+[ext_resource type="Script" uid="uid://5e2xbteg6i8d" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="18_m13ki"]
+[ext_resource type="Script" uid="uid://eghmirctupan" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="19_3mbjb"]
+[ext_resource type="Script" uid="uid://b6ykdaf7lknf7" path="res://Scenes/gui_manager.gd" id="20_3mbjb"]
+[ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="20_m13ki"]
 
 [sub_resource type="Environment" id="Environment_s8dlv"]
 background_mode = 1
@@ -35,7 +40,22 @@ albedo_texture = ExtResource("13_0vsm1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mbjb"]
 albedo_texture = ExtResource("15_3568l")
 
+[sub_resource type="Resource" id="Resource_jhx1v"]
+script = ExtResource("19_3mbjb")
+duration = 1.0
+transition = 7
+ease = 2
+
+[sub_resource type="Resource" id="Resource_yl1pv"]
+script = ExtResource("19_3mbjb")
+duration = 1.0
+transition = 7
+ease = 2
+
 [node name="shop" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s8dlv")
 
 [node name="Building" type="Node3D" parent="."]
 
@@ -62,7 +82,12 @@ material_override = ExtResource("1_a0mxf")
 size = Vector3(2, 1, 11)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 3, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0109067, 3, 0)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("3_yl1pv")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.55817, 8.6298, 0)
@@ -100,30 +125,6 @@ stream = ExtResource("8_tyrku")
 volume_db = -6.0
 autoplay = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_s8dlv")
-
-[node name="FridgeBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.93128, 2.3455, 3.69974)
-material_override = SubResource("StandardMaterial3D_mjtuy")
-mesh = ExtResource("9_tyrku")
-
-[node name="FridgeDoor" type="MeshInstance3D" parent="FridgeBody"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.792842, -0.579705, -0.837948)
-material_override = SubResource("StandardMaterial3D_cuuv1")
-mesh = ExtResource("10_5xp22")
-skeleton = NodePath("../..")
-
-[node name="FridgeDoorSmall" type="MeshInstance3D" parent="FridgeBody"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.780229, 1.08394, -0.833966)
-material_override = SubResource("StandardMaterial3D_yl1pv")
-mesh = ExtResource("11_ow1eo")
-
-[node name="Sink" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 1.65482, 1.55937)
-material_override = SubResource("StandardMaterial3D_m13ki")
-mesh = ExtResource("14_3568l")
-
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.71113, 8.6298, 0)
 light_color = Color(1, 0.923, 0.79, 1)
@@ -137,7 +138,72 @@ stream = ExtResource("2_s8dlv")
 volume_db = -6.0
 autoplay = true
 
-[node name="Table" type="MeshInstance3D" parent="."]
+[node name="Kitchen" type="Node3D" parent="."]
+
+[node name="FridgeBody" type="MeshInstance3D" parent="Kitchen"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.93128, 2.3455, 3.69974)
+material_override = SubResource("StandardMaterial3D_mjtuy")
+mesh = ExtResource("9_tyrku")
+skeleton = NodePath("../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
+
+[node name="FridgeDoor" type="MeshInstance3D" parent="Kitchen/FridgeBody"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.792842, -0.579705, -0.837948)
+material_override = SubResource("StandardMaterial3D_cuuv1")
+mesh = ExtResource("10_5xp22")
+skeleton = NodePath("../../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
+
+[node name="FridgeDoorSmall" type="MeshInstance3D" parent="Kitchen/FridgeBody"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.780229, 1.08394, -0.833966)
+material_override = SubResource("StandardMaterial3D_yl1pv")
+mesh = ExtResource("11_ow1eo")
+
+[node name="Sink" type="MeshInstance3D" parent="Kitchen"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 1.65482, 1.55937)
+material_override = SubResource("StandardMaterial3D_m13ki")
+mesh = ExtResource("14_3568l")
+skeleton = NodePath("../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
+
+[node name="Table" type="MeshInstance3D" parent="Kitchen"]
 transform = Transform3D(-5.80554e-08, 0, 1.47055, 0, 1, 0, -1.32815, 0, -6.42799e-08, -6.21761, 1.5373, -2.14233)
 material_override = SubResource("StandardMaterial3D_3mbjb")
 mesh = ExtResource("15_0vsm1")
+skeleton = NodePath("../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
+
+[node name="WindowCam" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0109067, 3, 0)
+script = ExtResource("18_m13ki")
+priority = 1
+tween_resource = SubResource("Resource_jhx1v")
+
+[node name="KitchenCam" type="Node3D" parent="."]
+transform = Transform3D(1.13566e-07, -0.866025, 0.5, -6.55671e-08, 0.5, 0.866025, -1, -1.31134e-07, 1.91069e-15, -5.45829, 3.94459, -2.09269)
+script = ExtResource("18_m13ki")
+tween_resource = SubResource("Resource_yl1pv")
+metadata/_custom_type_script = ExtResource("18_m13ki")
+
+[node name="GUI" type="Control" parent="." node_paths=PackedStringArray("kitchenCam")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_3mbjb")
+kitchenCam = NodePath("../KitchenCam")
+
+[node name="Button" type="Button" parent="GUI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 67.0
+offset_bottom = 15.5
+grow_vertical = 2
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("20_m13ki")
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "Kitchen"
+
+[connection signal="toggled" from="GUI/Button" to="GUI" method="_on_button_toggled"]

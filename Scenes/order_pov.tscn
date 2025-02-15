@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dayxjhigv6n7m"]
+[gd_scene load_steps=11 format=3 uid="uid://dayxjhigv6n7m"]
 
 [ext_resource type="PackedScene" uid="uid://d05trku3h6uoq" path="res://Assets/Eye/eye.fbx" id="1_s81hi"]
+[ext_resource type="PackedScene" uid="uid://d0ev8klkm3xjw" path="res://Assets/PSX Characters/Characters/Killer_01/Killer_01.fbx" id="1_smwnu"]
 [ext_resource type="Texture2D" uid="uid://8tsepsthvvj2" path="res://Assets/Eye/eye_0.png" id="2_v5iit"]
 [ext_resource type="PackedScene" uid="uid://dv140wtc3wakg" path="res://Assets/exports/Road.glb" id="2_wj5av"]
+[ext_resource type="Script" uid="uid://lo1vwolx787c" path="res://Assets/Eye/look_at_cam.gd" id="3_0p1s5"]
 [ext_resource type="PackedScene" uid="uid://c8o7n7l76mctb" path="res://Assets/exports/IndustrialBuilding.glb" id="3_v5iit"]
 [ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="5_enaw2"]
 
@@ -22,25 +24,50 @@ glow_enabled = true
 
 [node name="OrderPOV" type="Node3D"]
 
+[node name="Killer_01" parent="." instance=ExtResource("1_smwnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.993461, -0.347206)
+
+[node name="Skeleton3D" parent="Killer_01" index="0"]
+transform = Transform3D(0.999996, -0.000681031, 0.00262842, 0.000681561, 1, -0.000201004, -0.00262828, 0.00020279, 0.999997, 0, 0, 0)
+bones/0/position = Vector3(-1.35787e-06, 1.245, 0.00832808)
+bones/0/rotation = Quaternion(6.68794e-08, -2.30868e-07, 1.17629e-05, 1)
+bones/1/rotation = Quaternion(-0.0278426, 5.5828e-07, -1.17519e-05, 0.999612)
+bones/4/rotation = Quaternion(0.038, -0.22, -0.14, 1)
+bones/5/rotation = Quaternion(0.105, -0.04, 0, 1)
+bones/7/rotation = Quaternion(-1.964, -0.53, 0.102, -0.425)
+bones/8/rotation = Quaternion(0.289, -0.272, 0.167, 0.991)
+bones/9/rotation = Quaternion(3.27226e-07, 0.00322191, -2.57423e-07, 0.999995)
+bones/11/rotation = Quaternion(0.698, -0.151, 0.648, 0.094)
+bones/12/rotation = Quaternion(0.049, 0.212, -0.049, 0.991)
+bones/13/rotation = Quaternion(-3.34965e-07, -0.0019289, -3.97296e-07, 0.999998)
+bones/15/rotation = Quaternion(0.000116327, -0.00273193, 0.999899, -0.0139528)
+bones/16/rotation = Quaternion(-0.023172, 0.000874809, -0.0277231, 0.999347)
+bones/17/rotation = Quaternion(0.605808, 0.0421542, -0.0125893, 0.794394)
+bones/20/rotation = Quaternion(-5.7245e-05, -0.00395301, 0.999895, 0.0139765)
+bones/21/rotation = Quaternion(-0.0215581, -0.000821303, 0.0277237, 0.999383)
+bones/22/rotation = Quaternion(0.604118, -0.0426198, 0.0127714, 0.795652)
+
 [node name="eye" parent="." instance=ExtResource("1_s81hi")]
-transform = Transform3D(-0.2, 0, -1.74846e-08, 1.09299e-09, 0.199609, -0.0125024, 1.74504e-08, -0.0125024, -0.199609, -0.143564, 0.256487, 0)
+transform = Transform3D(-0.05, -1.98169e-10, -7.53502e-09, 2.73248e-10, 0.0499022, -0.0031256, 7.53268e-09, -0.0031256, -0.0499022, -0.072627, 0.966691, -0.306951)
+script = ExtResource("3_0p1s5")
 
 [node name="eyeball" parent="eye/bone" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_enaw2")
 
 [node name="eye2" parent="." instance=ExtResource("1_s81hi")]
-transform = Transform3D(-0.2, 0, -1.74846e-08, 1.09299e-09, 0.199609, -0.0125024, 1.74504e-08, -0.0125024, -0.199609, 0.13768, 0.256487, 0)
+transform = Transform3D(-0.05, -1.98169e-10, -7.53502e-09, 2.73248e-10, 0.0499022, -0.0031256, 7.53268e-09, -0.0031256, -0.0499022, 0.00343035, 0.935438, -0.291395)
+script = ExtResource("3_0p1s5")
 
 [node name="eyeball" parent="eye2/bone" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smwnu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.470135, 1.03332)
+transform = Transform3D(0.909352, 0.107676, -0.401851, 0.139427, 0.831187, 0.538226, 0.391968, -0.545466, 0.740829, -0.20467, 1.04344, 0.120192)
 environment = SubResource("Environment_rvofc")
-fov = 40.0
+fov = 120.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.57504, 0)
+transform = Transform3D(1, 0, 0, 0, 0.300623, 0.953743, 0, -0.953743, 0.300623, 0, 1.55736, 0.017868)
 
 [node name="Road2" parent="." instance=ExtResource("2_wj5av")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1, 0)
@@ -80,5 +107,6 @@ bbcode_enabled = true
 text = "[center]Test[/center]"
 fit_content = true
 
+[editable path="Killer_01"]
 [editable path="eye"]
 [editable path="eye2"]
