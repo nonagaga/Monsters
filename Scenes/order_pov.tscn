@@ -48,7 +48,7 @@ bones/21/rotation = Quaternion(-0.0215581, -0.000821303, 0.0277237, 0.999383)
 bones/22/rotation = Quaternion(0.604118, -0.0426198, 0.0127714, 0.795652)
 
 [node name="eye" parent="." instance=ExtResource("1_s81hi")]
-transform = Transform3D(-0.0477696, 0.00249843, 0.0145542, 0, 0.0492792, -0.00845949, -0.0147671, -0.00808213, -0.0470809, -0.072627, 0.966691, -0.306951)
+transform = Transform3D(-0.0477696, 0.00249844, 0.0145542, 0, 0.0492792, -0.00845949, -0.0147671, -0.00808213, -0.0470809, -0.072627, 0.966691, -0.306951)
 script = ExtResource("3_0p1s5")
 
 [node name="eyeball" parent="eye/bone" index="0"]
@@ -102,7 +102,7 @@ grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0.477387, 5.89602e-07, 2.16588e-07, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/normal_font = ExtResource("5_enaw2")
-theme_override_font_sizes/normal_font_size = 200
+theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[center]Pizza[/center]"
 fit_content = true
