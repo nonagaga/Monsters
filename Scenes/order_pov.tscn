@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dayxjhigv6n7m"]
+
+[ext_resource type="ArrayMesh" uid="uid://d5dm12wu7n7f" path="res://Assets/Saved Meshes/toilet.res" id="1_s81hi"]
+
+[node name="OrderPOV" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.470135, 1.03332)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
+mesh = ExtResource("1_s81hi")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.57504, 0)

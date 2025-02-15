@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Monsters"
-run/main_scene="uid://bhno6a4dxepht"
+run/main_scene="uid://hgjvmofc7u6m"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,11 +20,8 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
-[filesystem]
-
-import/blender/enabled=false
-
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
