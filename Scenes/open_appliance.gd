@@ -1,7 +1,7 @@
 extends MeshInstance3D
 
 @export var shop_manager : shop_manager
-@export var state : shop_manager.state
+@export var desired_state : shop_manager.state
 
 var last_state = null
 
@@ -15,11 +15,11 @@ func _process(delta: float) -> void:
 	pass
 
 func on_state_changed(state):
-	if state == shop_manager.state.ingredients:
+	if state == desired_state:
 		$AnimationPlayer.play("open")
 		$Open.play()
 	else:
-		if last_state == shop_manager.state.ingredients:
+		if last_state == desired_state:
 			$AnimationPlayer.play_backwards("open")
 			$Close.play()
 	last_state = state

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=57 format=4 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://43jfsneh17of" path="res://Scenes/shop_handler.gd" id="1_k7yfq"]
@@ -11,15 +11,18 @@
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
 [ext_resource type="AudioStream" uid="uid://dkcnpum4r2qo8" path="res://Audio/analog-crt-tv-electronic-static-noise-60428.mp3" id="8_tyrku"]
 [ext_resource type="Texture2D" uid="uid://dv2c806qs51de" path="res://Assets/Models pack psx/Texture/Al (1).png" id="9_1cyt5"]
-[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/fridge.gd" id="11_6rctg"]
+[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/open_appliance.gd" id="11_6rctg"]
 [ext_resource type="LightmapGIData" uid="uid://ddetqg64e8h2f" path="res://Scenes/shop.lmbake" id="13_dvu38"]
 [ext_resource type="AudioStream" uid="uid://dreurhfcu484l" path="res://Audio/open_fridge.wav" id="14_jhx1v"]
 [ext_resource type="ArrayMesh" uid="uid://cgs57a1cpekc6" path="res://Assets/Saved Meshes/table.res" id="15_0vsm1"]
 [ext_resource type="Texture2D" uid="uid://dv3crtunglp6a" path="res://Assets/- Classic 64 Asset Pack 0.6/Metal/Materials/metal_grunge_panel_01.png" id="15_3568l"]
 [ext_resource type="AudioStream" uid="uid://dg877kfyx5u6n" path="res://Audio/close_fridge.wav" id="15_dvu38"]
 [ext_resource type="Texture2D" uid="uid://cyu3307jvvdgd" path="res://Assets/PSX Kitchen/Electronics_kitchen/Textures/Kitchen.jpg" id="16_3mbjb"]
+[ext_resource type="AudioStream" uid="uid://bqc24qqa36meu" path="res://Audio/open_oven.wav" id="18_6rctg"]
 [ext_resource type="Script" uid="uid://5e2xbteg6i8d" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="18_m13ki"]
+[ext_resource type="AudioStream" uid="uid://ci8y8fybgm7oj" path="res://Audio/oven_close.wav" id="19_1shhe"]
 [ext_resource type="Script" uid="uid://eghmirctupan" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="19_3mbjb"]
+[ext_resource type="LightmapGIData" uid="uid://decfal44vov1y" path="res://Scenes/stove.lmbake" id="20_1shhe"]
 [ext_resource type="Script" uid="uid://b6ykdaf7lknf7" path="res://Scenes/gui_manager.gd" id="20_3mbjb"]
 [ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="20_m13ki"]
 [ext_resource type="Texture2D" uid="uid://mxf7uk0x5vrn" path="res://Assets/PSX Foods/Foods/Textures/Foods_04.jpg" id="22_jhx1v"]
@@ -333,20 +336,20 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jhx1v"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_1shhe"]
 resource_name = "Stove_02"
+lightmap_size_hint = Vector2i(154, 154)
 _surfaces = [{
 "aabb": AABB(-0.00454828, -0.00480386, -0.00606346, 0.009088, 0.00864272, 0.0121262),
-"attribute_data": PackedByteArray("LOf3PjgO3j4s5/c+JOWDPpTGOT8k5YM+lMY5PzgO3j6ffVQ/iJhKPsaxUz+ImEo+xrFTP5xpfz6ffVQ/nGl/PqElVT8oj1A+PfNFP9BvTD6zAkY/9AR5PqXXUz+0W0w+oSVVP7DyeD4IjEg/nGl/PsaxUz+caX8+xrFTP4iYSj4IjEg/iJhKPqElVT8oj1A+swJGP/AEeT4+80U/0G9MPqElVT+w8ng+pddTP7RbTD7+nz8/oKXuPP6fPz8ArOM6TZJ8PwCs4zpNknw/oKXuPLR4Uz9Qj3g+tHhTP7RbTD7Gp0o/tFtMPsanSj9Qj3g+oSVVP5xpfz6hJVU/iJhKPpf8RT+ImEo+lvxFP5xpfz6Gmlc/nP19PoaaVz+IBEw+hppXP7DyeD6hJVU/sPJ4PqElVT9Mln4+hppXP0yWfj6X/EU/TJZ+PqElVT9Mln4+oSVVP7DyeD4y/EU/sPJ4Ppb8RT9Iln4+MfxFP7DyeD6hJVU/sPJ4PqElVT9Mln4+rhpVP5z9fT7GsVM/nP19PsaxUz+IBEw+rhpVP4gETD6Gmlc/nP19PqElVT+caX8+oSVVP4iYSj6Gmlc/iARMPoaaVz9Mln4+oSVVP0yWfj6hJVU/sPJ4PoaaVz+w8ng+Plx5PxzVfz4q/UE/INV/PsveRD+MfjE+6Jt2P4x+MT4+XHk/oPsFPeibdj/gcz49y95EP+BzPj0q/UE/oPsFPT5ceT+g+wU9Plx5P0algD7om3Y/jH4xPuibdj/gcz49Kv1BP6D7BT3L3kQ/4HM+PcveRD+MfjE+Kv1BP0algD60eFM/IFhNPrR4Uz/EyXw+xqdKP8TJfD7Gp0o/IFhNPu+YUz/EyXw+CIxIP8TJfD4IjEg/IFhNPu+YUz8gWE0+xqdKP1CPeD7Gp0o/tFtMPrR4Uz+0W0w+tHhTP1CPeD7vmFM/IFhNPgiMSD8gWE0+CIxIP8TJfD7vmFM/xMl8PlBuOT4ApY09UG45PrgvIz6+UIU9uC8jPr5QhT0ApY09UG45PgCljT2+UIU9AKWNPb5QhT24LyM+UG45PrgvIz5Qbjk+uC8jPr5QhT24LyM+vlCFPbgvIz5Qbjk+uC8jPg=="),
-"format": 34359742487,
+"attribute_data": PackedByteArray("LOf3PjgO3j54RXk+i7gaPyzn9z4k5YM+eE55Plr5ST+Uxjk/JOWDPigIVzta+Uk/lMY5PzgO3j57x1Q7i7gaP599VD+ImEo+dNEFP3vHVDvGsVM/iJhKPnTRBT+wkPc8xrFTP5xpfz4eU0M/sJD3PJ99VD+caX8+HlNDP3vHVDuhJVU/KI9QPvWHlT6j1o0+PfNFP9BvTD6Bp4Y+e8dUO7MCRj/0BHk+OtfzPnvHVDul11M/tFtMPjymhj4NIYY+oSVVP7DyeD7i1fM+o9aNPgiMSD+caX8+HlNDP8RZeT7GsVM/nGl/Ph5TQz+wkPc8xrFTP4iYSj500QU/sJD3PAiMSD+ImEo+dNEFP8RZeT6hJVU/KI9QPoeWWz6v1o0+swJGP/AEeT5Cxvc8e8dUOz7zRT/Qb0w+2lZ5PkbIVDuhJVU/sPJ4Pu7e9zyu1o0+pddTP7RbTD7EWXk+GiGGPv6fPz+gpe48xFl5PuwdEz/+nz8/AKzjOnhFeT6LuBo/TZJ8PwCs4zp7x1Q7i7gaP02SfD+gpe48eNpZO+wdEz+0eFM/UI94Pjkrfz/B3nE/tHhTP7RbTD7LT0g/wd5xP8anSj+0W0w+y09IP8tPSD/Gp0o/UI94Pjkrfz/LT0g/oSVVP5xpfz4b6Ms9PyEOP6ElVT+ImEo+G+jLPSs/oT6X/EU/iJhKPjkrvz4rP6E+lvxFP5xpfz45K78+PyEOP4aaVz+c/X0+8xNiPV15DD+Gmlc/iARMPvMTYj3wjqQ+hppXP7DyeD6X2vM+SZKkPqElVT+w8ng+4tXzPqPWjT6hJVU/TJZ+PmzSAD+j1o0+hppXP0yWfj7H1AA/SZKkPpf8RT9Mln4+GdMAPyuZVjuhJVU/TJZ+PmzSAD+j1o0+oSVVP7DyeD7i1fM+o9aNPjL8RT+w8ng+OtfzPnvHVDuW/EU/SJZ+PsTBVjvpmFY7MfxFP7DyeD5Cxvc8e8dUO6ElVT+w8ng+7t73PK7WjT6hJVU/TJZ+PhuHVzuu1o0+rhpVP5z9fT45K38/A3sHP8axUz+c/X0+OSt/P3FW/j7GsVM/iARMPo+pQT9xVv4+rhpVP4gETD6PqUE/A3sHP4aaVz+c/X0+zsDZPv2EeD+hJVU/nGl/Pgpx1j72jmk/oSVVP4iYSj4vuig/9o5pP4aaVz+IBEw+TBInP/2EeD+Gmlc/TJZ+PnvHVDtJkqQ+oSVVP0yWfj4bh1c7rtaNPqElVT+w8ng+7t73PK7WjT6Gmlc/sPJ4PvmG9zxJkqQ+Plx5PxzVfz6SJMk+t20bPyr9QT8g1X8+8xMiP7dtGz/L3kQ/jH4xPpbgHj+LNgU/6Jt2P4x+MT5TQc8+izYFPz5ceT+g+wU9kiTJPqOLrj7om3Y/4HM+PVNBzz5vjbY+y95EP+BzPj2W4B4/b422Pir9QT+g+wU98xMiP6OLrj4+XHk/oPsFPZIkyT6ji64+Plx5P0algD6SJMk+t20bP+ibdj+MfjE+U0HPPos2BT/om3Y/4HM+PVNBzz5vjbY+Kv1BP6D7BT3zEyI/o4uuPsveRD/gcz49luAeP2+Ntj7L3kQ/jH4xPpbgHj+LNgU/Kv1BP0algD7zEyI/t20bP7R4Uz8gWE0+OSt/Px5TQz+0eFM/xMl8Pjkrfz+wdww/xqdKP8TJfD5CnFU/sHcMP8anSj8gWE0+QpxVPx5TQz/vmFM/xMl8PqAQJz8XXfQ+CIxIP8TJfD6gECc/PKaGPgiMSD8gWE0+DexdPzymhj7vmFM/IFhNPg3sXT8XXfQ+xqdKP1CPeD5qYO88QpxVP8anSj+0W0w+xFl5PkKcVT+0eFM/tFtMPsRZeT45K38/tHhTP1CPeD5qYO88OSt/P++YUz8gWE0+OSt/P2pg7zwIjEg/IFhNPstPSD9qYO88CIxIP8TJfD7LT0g/xFl5Pu+YUz/EyXw+OSt/P8RZeT5Qbjk+AKWNPR5TQz+Wn1A/UG45PrgvIz4eU0M/ZGogP75QhT24LyM+dNEFP2RqID++UIU9AKWNPXTRBT+Wn1A/UG45PgCljT3H1AA/lp9QP75QhT0ApY09PKaGPpafUD++UIU9uC8jPjymhj5kaiA/UG45PrgvIz7H1AA/ZGogP1BuOT64LyM+UwM7P6qBfT++UIU9uC8jPv2EeD+qgX0/vlCFPbgvIz79hHg/OSt/P1BuOT64LyM+UwM7Pzkrfz8="),
+"format": 34359742519,
 "index_count": 162,
 "index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACAALAAkACAAKAAwADQAOAA8ADwAQAA0AEQASABMAEQAUABIAEQATABUAFgAXABgAGAAZABYAGgAbABwAHAAdABoAHgAfACAAIAAhAB4AHwAeACIAIgAjAB8AJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZgBnAGQA"),
 "material": SubResource("StandardMaterial3D_0v5yc"),
-"name": "Kitchen",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 104,
-"vertex_data": PackedByteArray("ugmVu6hKdrugQo87ugmVu3v+OzugQo877cGUO3v+OzugQo877cGUO6hKdrugQo87ugmVu4OVezskp8a7ugmVu3v+OzsEsMa77cGUO3v+OzsEsMa77cGUO4OVezskp8a7ugmVu6hKdrugQo87ugmVu6ppnbsEsMa7ugmVu3v+OzsEsMa7ugmVu6ppnbt26Hg7ugmVu3v+OzugQo877cGUO6ppnbsEsMa77cGUO3v+OzsEsMa7ugmVu3v+OzsEsMa7ugmVu6ppnbsEsMa77cGUO6hKdrugQo877cGUO3v+OzsEsMa77cGUO6ppnbsEsMa77cGUO3v+OzugQo877cGUO6ppnbt26Hg7ugmVu6ppnbt26Hg7ugmVu6hKdrugQo877cGUO6hKdrugQo877cGUO6ppnbt26Hg75fWFO8idNzvx8VI75fWFO6ppnbvx8VI75fWFO6ppnbvStzq75fWFO8idNzvStzq77cGUO4OVezugQo87ugmVu4OVezugQo87ugmVu4OVezskp8a77cGUO4OVezskp8a7nL2MO4OVezsRqsY7aQWNu4OVezsRqsY7aQWNu3v+OzsRqsY7ugmVu3v+OzugQo87ugmVu4OVezugQo87aQWNu4OVezsRqsY7ugmVu4OVezskp8a7ugmVu4OVezugQo87ugmVu3v+OzugQo87ugmVu3v+OzsEsMa77cGUO4OVezskp8a77cGUO3v+OzsEsMa77cGUO3v+OzugQo877cGUO4OVezugQo87nL2MO4OVezsRqsY7nL2MO3v+OzsRqsY7aQWNu3v+OzsRqsY7aQWNu4OVezsRqsY7nL2MO3v+OzsRqsY77cGUO3v+OzugQo87ugmVu3v+OzugQo87aQWNu3v+OzsRqsY7nL2MO4OVezsRqsY77cGUO4OVezugQo877cGUO3v+OzugQo87nL2MO3v+OzsRqsY77cGUO6ppnbsEsMa7ugmVu6ppnbsEsMa7pIqFu6ppnbvStzq75fWFO6ppnbvStzq77cGUO6ppnbt26Hg75fWFO6ppnbvx8VI7pIqFu6ppnbvx8VI7ugmVu6ppnbt26Hg77cGUO6ppnbt26Hg77cGUO6ppnbsEsMa75fWFO6ppnbvStzq75fWFO6ppnbvx8VI7ugmVu6ppnbt26Hg7pIqFu6ppnbvx8VI7pIqFu6ppnbvStzq7ugmVu6ppnbsEsMa7pIqFu8idNzvx8VI75fWFO8idNzvx8VI75fWFO8idNzvStzq7pIqFu8idNzvStzq75fWFO8idNzvStzq75fWFO6ppnbvStzq7pIqFu6ppnbvStzq7pIqFu8idNzvStzq7pIqFu8idNzvStzq7pIqFu6ppnbvStzq7pIqFu6ppnbvx8VI7pIqFu8idNzvx8VI7pIqFu8idNzvx8VI7pIqFu6ppnbvx8VI75fWFO6ppnbvx8VI75fWFO8idNzvx8VI7B9aPO8idNzuSOSg4B9aPOxSTg7uSOSg4xmqPuxSTg7uSOSg4xmqPu8idNzuSOSg4B9aPO8idNztKNVC5xmqPu8idNztKNVC5xmqPuxSTg7tKNVC5B9aPOxSTg7tKNVC5B9aPOxSTg7tKNVC5xmqPuxSTg7tKNVC5xmqPuxSTg7uSOSg4B9aPOxSTg7uSOSg4/3//f////7//f/9/////v/9//3////+//3//f////7/b/////38RANv/////fxEA2/////9/EQDb/////38RAAAA/3//f2k/AAD/f/9/HT4AAP9//3+uPgAA/3//f98/AAD/f/9/7T///////38AAP//////fwAA//////9/AAD//////38AAP///3//f5XA////f/9/UMH///9//3/hwf///3//fxHA////f/9/H8D/f6RS////v/9/pFL///+//3+kUv///7//f6RS////vwAA/3//f/8/AAD/f/9//z8AAP9//3//PwAA/3//f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8/LhD/fy2Q/z8uEP9/LZD/Py4Q/38tkP8/LhD/fy2Q/z8AAP9//3//PwAA/3//f/8/AAD/f/9//z8AAP9//3//P/7//3//f/+//v//f/9//7/+//9//3//v/7//3//f/+//3//f/9/////f/9//3////9//3//f////3//f/9/////fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v9Dv/3/Rb/+/0O//f9Fv/7/Q7/9/0W//v9Dv/3/Rb/+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///7F/38AALbM/7//fwAAw83/v/9/AAD//6jJ/38AAK30/7//fwAAa+3/v/9/AAD//2TY/38AAP//7tj/fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9//3//f////3//f/9/////f/9//3////9//3//f///////f/9//7////9//3//v////3//f/+/////f/9//7///////38AAP//////fwAA//////9/AAD//////38AAP9//3////+//3//f////7//f/9/////v/9//3////+//////////z//////////P/////////8//////////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////vw==")
+"vertex_data": PackedByteArray("ugmVu6hKdrugQo87ugmVu3v+OzugQo877cGUO3v+OzugQo877cGUO6hKdrugQo87ugmVu4OVezskp8a7ugmVu3v+OzsEsMa77cGUO3v+OzsEsMa77cGUO4OVezskp8a7ugmVu6hKdrugQo87ugmVu6ppnbsEsMa7ugmVu3v+OzsEsMa7ugmVu6ppnbt26Hg7ugmVu3v+OzugQo877cGUO6ppnbsEsMa77cGUO3v+OzsEsMa7ugmVu3v+OzsEsMa7ugmVu6ppnbsEsMa77cGUO6hKdrugQo877cGUO3v+OzsEsMa77cGUO6ppnbsEsMa77cGUO3v+OzugQo877cGUO6ppnbt26Hg7ugmVu6ppnbt26Hg7ugmVu6hKdrugQo877cGUO6hKdrugQo877cGUO6ppnbt26Hg75fWFO8idNzvx8VI75fWFO6ppnbvx8VI75fWFO6ppnbvStzq75fWFO8idNzvStzq77cGUO4OVezugQo87ugmVu4OVezugQo87ugmVu4OVezskp8a77cGUO4OVezskp8a7nL2MO4OVezsRqsY7aQWNu4OVezsRqsY7aQWNu3v+OzsRqsY7ugmVu3v+OzugQo87ugmVu4OVezugQo87aQWNu4OVezsRqsY7ugmVu4OVezskp8a7ugmVu4OVezugQo87ugmVu3v+OzugQo87ugmVu3v+OzsEsMa77cGUO4OVezskp8a77cGUO3v+OzsEsMa77cGUO3v+OzugQo877cGUO4OVezugQo87nL2MO4OVezsRqsY7nL2MO3v+OzsRqsY7aQWNu3v+OzsRqsY7aQWNu4OVezsRqsY7nL2MO3v+OzsRqsY77cGUO3v+OzugQo87ugmVu3v+OzugQo87aQWNu3v+OzsRqsY7nL2MO4OVezsRqsY77cGUO4OVezugQo877cGUO3v+OzugQo87nL2MO3v+OzsRqsY77cGUO6ppnbsEsMa7ugmVu6ppnbsEsMa7pIqFu6ppnbvStzq75fWFO6ppnbvStzq77cGUO6ppnbt26Hg75fWFO6ppnbvx8VI7pIqFu6ppnbvx8VI7ugmVu6ppnbt26Hg77cGUO6ppnbt26Hg77cGUO6ppnbsEsMa75fWFO6ppnbvStzq75fWFO6ppnbvx8VI7ugmVu6ppnbt26Hg7pIqFu6ppnbvx8VI7pIqFu6ppnbvStzq7ugmVu6ppnbsEsMa7pIqFu8idNzvx8VI75fWFO8idNzvx8VI75fWFO8idNzvStzq7pIqFu8idNzvStzq75fWFO8idNzvStzq75fWFO6ppnbvStzq7pIqFu6ppnbvStzq7pIqFu8idNzvStzq7pIqFu8idNzvStzq7pIqFu6ppnbvStzq7pIqFu6ppnbvx8VI7pIqFu8idNzvx8VI7pIqFu8idNzvx8VI7pIqFu6ppnbvx8VI75fWFO6ppnbvx8VI75fWFO8idNzvx8VI7B9aPO8idNzuSOSg4B9aPOxSTg7uSOSg4xmqPuxSTg7uSOSg4xmqPu8idNzuSOSg4B9aPO8idNztKNVC5xmqPu8idNztKNVC5xmqPuxSTg7tKNVC5B9aPOxSTg7tKNVC5B9aPOxSTg7tKNVC5xmqPuxSTg7tKNVC5xmqPuxSTg7uSOSg4B9aPOxSTg7uSOSg4/3//f////7//f/9/////v/9//3////+//3//f////7/b/////38QANv/////fxAA2/////9/EADb/////38QAAAAAID/f2k/AAAAgP9/HT4AAACA/3+uPgAAAID/f98/AAAAgP9/7T//////AIAAAP////8AgAAA/////wCAAAD/////AIAAAP//AID/f5XA//8AgP9/UMH//wCA/3/hwf//AID/fxHA//8AgP9/H8D/f6NS////v/9/o1L///+//3+jUv///7//f6NS////vwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AID///9//z8AgP///3//PwCA////f/8/AID///9//z8AgP///3//PwCA////f/8/LhD/fy2Q/z8uEP9/LZD/Py4Q/38tkP8/LhD/fy2Q/z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//P/7//3//f/+//v//f/9//7/+//9//3//v/7//3//f/+//3//fwCA////f/9/AID///9//38AgP///3//fwCA//8AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//v9Dv/3/Rb/+/0O//f9Fv/7/Q7/9/0W//v9Dv/3/Rb/+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///7FAIAAALbM/78AgAAAw83/vwCAAAD//6jJAIAAAK30/78AgAAAa+3/vwCAAAD//2TYAIAAAP//7tgAgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//v/9//38AgP///3//fwCA////f/9/AID///9//38AgP////8AgP9//7///wCA/3//v///AID/f/+///8AgP9//7//////AIAAAP////8AgAAA/////wCAAAD/////AIAAAP9//3////+//3//f////7//f/9/////v/9//3////+//////////z//////////P/////////8//////////z8AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vw==")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y7mqh")
@@ -384,6 +387,43 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hnrpw")
+
+[sub_resource type="Animation" id="Animation_k7yfq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stove_door_02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dvu38"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stove_door_02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.5708, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6rctg"]
+_data = {
+&"RESET": SubResource("Animation_k7yfq"),
+&"open": SubResource("Animation_dvu38")
+}
 
 [sub_resource type="Resource" id="Resource_jhx1v"]
 script = ExtResource("19_3mbjb")
@@ -496,18 +536,36 @@ transform = Transform3D(-1.08608e-05, 248.466, 1.08608e-05, 0, -1.44248e-05, 330
 mesh = SubResource("ArrayMesh_dvu38")
 skeleton = NodePath("")
 
-[node name="Stove_02" type="MeshInstance3D" parent="Building/Kitchen"]
+[node name="Stove_02" type="MeshInstance3D" parent="Building/Kitchen" node_paths=PackedStringArray("shop_manager")]
 transform = Transform3D(-5.6426e-05, -200, -8.74228e-06, 0, -8.74228e-06, 200, -200, 5.6426e-05, 2.46646e-12, -6.58356, 1.67706, -3.52009)
-mesh = SubResource("ArrayMesh_jhx1v")
+mesh = SubResource("ArrayMesh_1shhe")
 skeleton = NodePath("")
+script = ExtResource("11_6rctg")
+shop_manager = NodePath("../../..")
+desired_state = 2
 
 [node name="Stove_door_02" type="MeshInstance3D" parent="Building/Kitchen/Stove_02"]
 transform = Transform3D(0.462444, 0, 0, 0, 0.462444, 0, 0, 0, 0.462444, 6.3777e-06, -0.00466246, -0.00289869)
 mesh = SubResource("ArrayMesh_k7yfq")
 skeleton = NodePath("")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Building/Kitchen/Stove_02"]
+libraries = {
+&"": SubResource("AnimationLibrary_6rctg")
+}
+
+[node name="Open" type="AudioStreamPlayer3D" parent="Building/Kitchen/Stove_02"]
+stream = ExtResource("18_6rctg")
+volume_db = 3.0
+
+[node name="Close" type="AudioStreamPlayer3D" parent="Building/Kitchen/Stove_02"]
+stream = ExtResource("19_1shhe")
+
+[node name="LightmapGI" type="LightmapGI" parent="Building/Kitchen/Stove_02"]
+light_data = ExtResource("20_1shhe")
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0109067, 3, 0)
+transform = Transform3D(4.13493e-08, -0.315318, 0.948986, -1.24445e-07, 0.948986, 0.315318, -1, -1.31135e-07, 2.84217e-13, -4.77904, 2.2322, -3.52962)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -548,8 +606,9 @@ priority = 1
 tween_resource = SubResource("Resource_jhx1v")
 
 [node name="BakeCam" type="Node3D" parent="."]
-transform = Transform3D(8.82368e-08, -0.67287, 0.73976, -9.7008e-08, 0.73976, 0.67287, -1, -1.31134e-07, 3.82138e-15, -4.83659, 2.80666, -3.52962)
+transform = Transform3D(4.13493e-08, -0.315317, 0.948986, -1.24445e-07, 0.948986, 0.315317, -1, -1.31134e-07, -2.39458e-15, -4.77904, 2.2322, -3.52962)
 script = ExtResource("18_m13ki")
+priority_override = true
 tween_resource = SubResource("Resource_yl1pv")
 metadata/_custom_type_script = ExtResource("18_m13ki")
 
