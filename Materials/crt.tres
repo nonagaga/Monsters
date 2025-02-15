@@ -1,7 +1,9 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://xfyyat7culq5"]
 
 [ext_resource type="Shader" uid="uid://h53f5nstrv2j" path="res://Shaders/crt.gdshader" id="1_ms6vs"]
-[ext_resource type="Texture2D" uid="uid://cvkf2kdrriqvf" path="res://icon.svg" id="2_yhrxx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rwott"]
+viewport_path = NodePath("TV/SubViewport")
 
 [resource]
 render_priority = 0
@@ -27,4 +29,4 @@ shader_parameter/warp_amount = 1.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
-shader_parameter/SCREEN_TEXTURE = ExtResource("2_yhrxx")
+shader_parameter/SCREEN_TEXTURE = SubResource("ViewportTexture_rwott")

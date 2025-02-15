@@ -1,15 +1,84 @@
-[gd_scene load_steps=2 format=3 uid="uid://dayxjhigv6n7m"]
+[gd_scene load_steps=9 format=3 uid="uid://dayxjhigv6n7m"]
 
-[ext_resource type="ArrayMesh" uid="uid://d5dm12wu7n7f" path="res://Assets/Saved Meshes/toilet.res" id="1_s81hi"]
+[ext_resource type="PackedScene" uid="uid://d05trku3h6uoq" path="res://Assets/Eye/eye.fbx" id="1_s81hi"]
+[ext_resource type="Texture2D" uid="uid://8tsepsthvvj2" path="res://Assets/Eye/eye_0.png" id="2_v5iit"]
+[ext_resource type="PackedScene" uid="uid://dv140wtc3wakg" path="res://Assets/exports/Road.glb" id="2_wj5av"]
+[ext_resource type="PackedScene" uid="uid://c8o7n7l76mctb" path="res://Assets/exports/IndustrialBuilding.glb" id="3_v5iit"]
+[ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="5_enaw2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enaw2"]
+albedo_texture = ExtResource("2_v5iit")
+emission_enabled = true
+emission_texture = ExtResource("2_v5iit")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smwnu"]
+albedo_texture = ExtResource("2_v5iit")
+emission_enabled = true
+emission_texture = ExtResource("2_v5iit")
+
+[sub_resource type="Environment" id="Environment_rvofc"]
+background_mode = 1
+glow_enabled = true
 
 [node name="OrderPOV" type="Node3D"]
 
+[node name="eye" parent="." instance=ExtResource("1_s81hi")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 1.09299e-09, 0.199609, -0.0125024, 1.74504e-08, -0.0125024, -0.199609, -0.143564, 0.256487, 0)
+
+[node name="eyeball" parent="eye/bone" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_enaw2")
+
+[node name="eye2" parent="." instance=ExtResource("1_s81hi")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 1.09299e-09, 0.199609, -0.0125024, 1.74504e-08, -0.0125024, -0.199609, 0.13768, 0.256487, 0)
+
+[node name="eyeball" parent="eye2/bone" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smwnu")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.470135, 1.03332)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
-mesh = ExtResource("1_s81hi")
+environment = SubResource("Environment_rvofc")
+fov = 40.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.57504, 0)
+
+[node name="Road2" parent="." instance=ExtResource("2_wj5av")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1, 0)
+
+[node name="Road3" parent="." instance=ExtResource("2_wj5av")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1, -4)
+
+[node name="IndustrialBuilding" parent="." instance=ExtResource("3_v5iit")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, -1, -2)
+
+[node name="IndustrialBuilding2" parent="." instance=ExtResource("3_v5iit")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, -1, -2)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -39.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.477387, 5.89602e-07, 2.16588e-07, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("5_enaw2")
+theme_override_font_sizes/normal_font_size = 200
+bbcode_enabled = true
+text = "[center]Test[/center]"
+fit_content = true
+
+[editable path="eye"]
+[editable path="eye2"]

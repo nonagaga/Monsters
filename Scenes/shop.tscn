@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=9 format=3 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="PackedScene" uid="uid://btlexaneuc6va" path="res://Assets/exports/BrickBuilding.glb" id="2_2shtd"]
+[ext_resource type="AudioStream" uid="uid://dhquqwaelyfe8" path="res://Audio/factory-fluorescent-light-buzz-6871.mp3" id="2_s8dlv"]
 [ext_resource type="ArrayMesh" uid="uid://c3xaipa2khtvs" path="res://Assets/Saved Meshes/tv.res" id="3_io27d"]
 [ext_resource type="Material" uid="uid://xfyyat7culq5" path="res://Materials/crt.tres" id="4_3ps1r"]
 [ext_resource type="PackedScene" uid="uid://dayxjhigv6n7m" path="res://Scenes/order_pov.tscn" id="4_fdj0q"]
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
+[ext_resource type="AudioStream" uid="uid://dkcnpum4r2qo8" path="res://Audio/analog-crt-tv-electronic-static-noise-60428.mp3" id="8_tyrku"]
 
 [node name="shop" type="Node3D"]
 
@@ -30,6 +32,11 @@ light_bake_mode = 1
 spot_range = 23.2307
 spot_attenuation = 1.5
 spot_angle = 55.24
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SpotLight3D"]
+stream = ExtResource("2_s8dlv")
+volume_db = -6.0
+autoplay = true
 
 [node name="BrickBuilding" parent="." instance=ExtResource("2_2shtd")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.44934, 0, -4.71305)
@@ -56,3 +63,8 @@ light_color = Color(0.917647, 1, 1, 1)
 light_energy = 1.53
 spot_range = 16.865
 spot_angle = 130.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TV"]
+stream = ExtResource("8_tyrku")
+volume_db = -6.0
+autoplay = true
