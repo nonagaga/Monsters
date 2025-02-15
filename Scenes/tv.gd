@@ -1,3 +1,4 @@
+@tool
 extends MeshInstance3D
 
 
@@ -8,8 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var spat_mat = StandardMaterial3D.new()
+	var mat : ShaderMaterial = get_surface_override_material(1)
 	var texture_to_apply = $SubViewport.get_texture()
-
-	spat_mat.albedo_texture = texture_to_apply
-	set_surface_override_material(1, spat_mat)
+	
+	mat.set_shader_parameter("SCREEN_TEXTURE", texture_to_apply)
+	set_surface_override_material(1, mat)

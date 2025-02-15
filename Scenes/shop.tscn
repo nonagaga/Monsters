@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=7 format=3 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="PackedScene" uid="uid://btlexaneuc6va" path="res://Assets/exports/BrickBuilding.glb" id="2_2shtd"]
 [ext_resource type="ArrayMesh" uid="uid://c3xaipa2khtvs" path="res://Assets/Saved Meshes/tv.res" id="3_io27d"]
+[ext_resource type="Material" uid="uid://xfyyat7culq5" path="res://Materials/crt.tres" id="4_3ps1r"]
 [ext_resource type="PackedScene" uid="uid://dayxjhigv6n7m" path="res://Scenes/order_pov.tscn" id="4_fdj0q"]
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
 
@@ -22,8 +23,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 3,
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 14.6185, 0)
+visible = false
 light_color = Color(0.847059, 1, 1, 1)
-light_energy = 30.605
+light_energy = 5.585
 light_bake_mode = 1
 spot_range = 23.2307
 spot_attenuation = 1.5
@@ -41,9 +43,16 @@ transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, -2.477
 [node name="TV" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.306576, 0, 0.951846, 0, 1, 0, -0.951846, 0, -0.306576, 3.16133, 4, -1.74204)
 mesh = ExtResource("3_io27d")
+surface_material_override/1 = ExtResource("4_3ps1r")
 script = ExtResource("4_k6jq0")
 
 [node name="SubViewport" type="SubViewport" parent="TV"]
 own_world_3d = true
 
 [node name="OrderPOV" parent="TV/SubViewport" instance=ExtResource("4_fdj0q")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="TV"]
+light_color = Color(0.917647, 1, 1, 1)
+light_energy = 1.53
+spot_range = 16.865
+spot_angle = 130.0
