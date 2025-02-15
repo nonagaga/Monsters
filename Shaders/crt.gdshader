@@ -18,6 +18,10 @@ shader_type spatial;
 // to "vec2 uv = warp(SCREEN_UV);" on line 98.
 uniform bool overlay = false;
 
+uniform float r_level : hint_range(0.0, 1.0, 0.1) = 0;
+uniform float g_level : hint_range(0.0, 1.0, 0.1) = 0;
+uniform float b_level : hint_range(0.0, 1.0, 0.1) = 0;
+
 uniform float scanlines_opacity : hint_range(0.0, 1.0) = 0.4;
 uniform float scanlines_width : hint_range(0.0, 0.5) = 0.25;
 uniform float grille_opacity : hint_range(0.0, 1.0) = 0.3;
@@ -225,7 +229,7 @@ void fragment()
 		float midpoint = pow(0.5, 2.2);
 		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
 	}
-	ALBEDO = vec3(0,text.g,text.b);
+	ALBEDO = vec3(text.r * r_level,text.g * g_level,text.b * b_level);
 	ALPHA = text.a;
-	EMISSION = vec3(0,text.g,text.b);
+	EMISSION = vec3(text.r * r_level,text.g * g_level,text.b * b_level);
 }

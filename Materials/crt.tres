@@ -3,12 +3,15 @@
 [ext_resource type="Shader" uid="uid://h53f5nstrv2j" path="res://Shaders/crt.gdshader" id="1_ms6vs"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_rwott"]
-viewport_path = NodePath("TV/SubViewport")
+viewport_path = NodePath("Building/TV/SubViewport")
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_ms6vs")
 shader_parameter/overlay = false
+shader_parameter/r_level = 1.0
+shader_parameter/g_level = 0.4
+shader_parameter/b_level = 0.4
 shader_parameter/scanlines_opacity = 0.4
 shader_parameter/scanlines_width = 0.25
 shader_parameter/grille_opacity = 0.3

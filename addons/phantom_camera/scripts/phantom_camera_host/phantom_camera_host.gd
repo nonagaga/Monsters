@@ -1178,3 +1178,7 @@ func refresh_pcam_list_priorty() -> void:
 	#return interpolation_mode
 
 #endregion
+
+
+func _on_prepare_button_pressed() -> void:
+	pass # Replace with function body.
