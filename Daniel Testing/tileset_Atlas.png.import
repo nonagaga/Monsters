@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dmtccd0vpsys"
+path.s3tc="res://.godot/imported/tileset_Atlas.png-a069b2759340bcf22fd1e210c26f8fb6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "084051f09e44a5afdb6dbadc739180cd"
+}
+
+[deps]
+
+source_file="res://Daniel Testing/tileset_Atlas.png"
+dest_files=["res://.godot/imported/tileset_Atlas.png-a069b2759340bcf22fd1e210c26f8fb6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
