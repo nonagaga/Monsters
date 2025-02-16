@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpl0dbdrvbpfu"]
+
+[ext_resource type="Texture2D" uid="uid://cntkqqsce0f4j" path="res://Assets/Pizza Sprites/saucy pizza.png" id="1_icsra"]
+
+[node name="Sauce" type="Sprite3D"]
+transform = Transform3D(0.085, 0, 1.65436e-24, 0, 0.085, 0, -1.65436e-24, 0, 0.085, 0, 0, 0)
+pixel_size = 0.0001
+texture_filter = 0
+texture = ExtResource("1_icsra")

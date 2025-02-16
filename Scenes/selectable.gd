@@ -12,7 +12,7 @@ func _ready() -> void:
 	mesh.material_overlay = shaderMat
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func on_mouse_entered():
@@ -24,5 +24,5 @@ func on_mouse_exited():
 	shaderMat.set_shader_parameter("on", false)
 
 
-func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	pass # Replace with function body.

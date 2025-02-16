@@ -18,7 +18,7 @@ func reset_camera_priorities():
 	deliverCam.priority = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_ingredients_button_pressed() -> void:
