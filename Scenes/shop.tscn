@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=58 format=4 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://43jfsneh17of" path="res://Scenes/shop_handler.gd" id="1_k7yfq"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
 [ext_resource type="AudioStream" uid="uid://dkcnpum4r2qo8" path="res://Audio/analog-crt-tv-electronic-static-noise-60428.mp3" id="8_tyrku"]
 [ext_resource type="Texture2D" uid="uid://dv2c806qs51de" path="res://Assets/Models pack psx/Texture/Al (1).png" id="9_1cyt5"]
-[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/fridge.gd" id="11_6rctg"]
+[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/open_appliance.gd" id="11_6rctg"]
 [ext_resource type="LightmapGIData" uid="uid://ddetqg64e8h2f" path="res://Scenes/shop.lmbake" id="13_dvu38"]
 [ext_resource type="AudioStream" uid="uid://dreurhfcu484l" path="res://Audio/open_fridge.wav" id="14_jhx1v"]
 [ext_resource type="PackedScene" uid="uid://dm1hwbaut181p" path="res://Scenes/canned_sauce.tscn" id="14_n1qjt"]
@@ -30,7 +30,6 @@
 [ext_resource type="Script" uid="uid://b6ykdaf7lknf7" path="res://Scenes/gui_manager.gd" id="20_3mbjb"]
 [ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="20_m13ki"]
 [ext_resource type="PackedScene" uid="uid://c73uvmkarffyv" path="res://Scenes/pizza_component.tscn" id="21_0icju"]
-[ext_resource type="Shader" uid="uid://cw4nmo0gp6w57" path="res://Shaders/item_highlight.gdshader" id="26_ik0jt"]
 
 [sub_resource type="Environment" id="Environment_s8dlv"]
 background_mode = 1
@@ -492,7 +491,6 @@ stream = ExtResource("15_dvu38")
 
 [node name="food_canned_soup_8" parent="Building/Kitchen/FridgeBody" instance=ExtResource("14_n1qjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.475586, -0.297003, 0.194979)
-shader = ExtResource("26_ik0jt")
 
 [node name="cheese_supply" parent="Building/Kitchen/FridgeBody" instance=ExtResource("16_lkkvn")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.29193, -0.609127, -0.00977707)
@@ -530,19 +528,13 @@ transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, -0.0333303, 0.52666
 
 [node name="PizzaComponent" parent="Building/Kitchen/Table" instance=ExtResource("21_0icju")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, -1.08487, 0.546941, 0)
-does_highlight = false
 
 [node name="Stove_02" type="MeshInstance3D" parent="Building/Kitchen" node_paths=PackedStringArray("s_manager")]
 transform = Transform3D(-5.6426e-05, -200, -8.74228e-06, 0, -8.74228e-06, 200, -200, 5.6426e-05, 2.46646e-12, -6.58356, 1.67706, -3.52009)
 mesh = SubResource("ArrayMesh_1shhe")
 skeleton = NodePath("")
 script = ExtResource("11_6rctg")
-<<<<<<< HEAD
-shop_manager = NodePath("../../..")
-=======
 s_manager = NodePath("../../..")
-desired_state = 2
->>>>>>> d62dbc0b140cf1d07f9053d4ab684bb6c19493d1
 
 [node name="Stove_door_02" type="MeshInstance3D" parent="Building/Kitchen/Stove_02"]
 transform = Transform3D(0.462444, 0, 0, 0, 0.462444, 0, 0, 0, 0.462444, 6.3777e-06, -0.00466246, -0.00289869)
