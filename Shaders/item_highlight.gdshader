@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode unshaded, depth_draw_never;
 
-uniform bool on = true;
+uniform bool on = false;
 uniform vec4 shine_color : source_color = vec4( 1.0, 1.0, 1.0, 0.2 );
 uniform float cycle_interval : hint_range(0.5, 50.0) = 50;
 uniform float shine_speed : hint_range(0.0, 5.0) = 0;
