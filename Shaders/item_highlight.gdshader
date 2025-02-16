@@ -21,5 +21,5 @@ void fragment( )
 	{
 		ALPHA = clamp( ( 1.0 - dot( NORMAL, VIEW ) ) * frequency * 0.0, 0.0, 1.0 );
 	}
-	
+
 }
