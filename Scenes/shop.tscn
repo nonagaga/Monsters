@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dte6glarpabpw" path="res://Scenes/tv.gd" id="4_k6jq0"]
 [ext_resource type="AudioStream" uid="uid://dkcnpum4r2qo8" path="res://Audio/analog-crt-tv-electronic-static-noise-60428.mp3" id="8_tyrku"]
 [ext_resource type="Texture2D" uid="uid://dv2c806qs51de" path="res://Assets/Models pack psx/Texture/Al (1).png" id="9_1cyt5"]
-[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/open_appliance.gd" id="11_6rctg"]
+[ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/fridge.gd" id="11_6rctg"]
 [ext_resource type="LightmapGIData" uid="uid://ddetqg64e8h2f" path="res://Scenes/shop.lmbake" id="13_dvu38"]
 [ext_resource type="AudioStream" uid="uid://dreurhfcu484l" path="res://Audio/open_fridge.wav" id="14_jhx1v"]
 [ext_resource type="PackedScene" uid="uid://dm1hwbaut181p" path="res://Scenes/canned_sauce.tscn" id="14_n1qjt"]
@@ -510,7 +510,6 @@ mesh = SubResource("ArrayMesh_1shhe")
 skeleton = NodePath("")
 script = ExtResource("11_6rctg")
 shop_manager = NodePath("../../..")
-desired_state = 2
 
 [node name="Stove_door_02" type="MeshInstance3D" parent="Building/Kitchen/Stove_02"]
 transform = Transform3D(0.462444, 0, 0, 0, 0.462444, 0, 0, 0, 0.462444, 6.3777e-06, -0.00466246, -0.00289869)
