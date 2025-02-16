@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqwmeg40xs7lo"
-path.s3tc="res://.godot/imported/food_canned_soup_8.png-0f3055b8f68638c35bf1598827e6724a.s3tc.ctex"
+uid="uid://bj5d384ba54re"
+path.s3tc="res://.godot/imported/pizza_cheese.png-4412f064e5599d07268114e2c15d0344.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/- Classic 64 Asset Pack 0.6/Food/Materials/food_canned_soup_8.png"
-dest_files=["res://.godot/imported/food_canned_soup_8.png-0f3055b8f68638c35bf1598827e6724a.s3tc.ctex"]
+source_file="res://Assets/Pizza Sprites/pizza_cheese.png"
+dest_files=["res://.godot/imported/pizza_cheese.png-4412f064e5599d07268114e2c15d0344.s3tc.ctex"]
 
 [params]
 

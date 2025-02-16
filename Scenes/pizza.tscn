@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=4 uid="uid://el38jhcsr5vm"]
+
+[ext_resource type="Texture2D" uid="uid://bk4tx4guu5cy4" path="res://Assets/PSX Foods/Foods/Textures/Foods_04_naked.jpg" id="1_nkrds"]
+[ext_resource type="Texture2D" uid="uid://cntkqqsce0f4j" path="res://Assets/Pizza Sprites/saucy pizza.png" id="2_je5pd"]
+[ext_resource type="Texture2D" uid="uid://bj5d384ba54re" path="res://Assets/Pizza Sprites/pizza_cheese.png" id="3_7s6re"]
+[ext_resource type="AudioStream" uid="uid://cuyjp3uwcpqxe" path="res://Audio/supernatural-scream-192423.mp3" id="4_geqgq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8rv1"]
+resource_name = "Foods_04"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_nkrds")
+emission_enabled = true
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uqocw"]
+_surfaces = [{
+"aabb": AABB(-0.00186431, -0.00196025, -6.96909e-05, 0.00372862, 0.0039205, 0.000139382),
+"format": 34359742465,
+"index_count": 168,
+"index_data": PackedByteArray("EgAHAAsACwATABIABgALAAcAFAATAAsACwAGABQABAATABQAEgATAAQAFAABAAQABAAVABIAAwAHABIABgAHAAMAEgAWAAMAEgAVAAoACgAWABIADAAVAAQADAAKABUADAAEAAEAFwAWAAoACgAMABcAAwAWABcABgADAAgAFwAIAAMAFwAMAAIAAgAMAAEADQAIABcABgAIAA0AAgAYABcAFwAYAA0AGAACAA4ADgACAAEABQANABgABgANAAUADgAZABgAGAAZAAUADwAOAAEAGQAOAA8ABgAFABAAEAAFABkAGQAaABAADwAaABkACQAGABAADwABABEACQAQABsAEAAaAAAAAAAaAA8AAAAbABAADwARABwADwAcAAAAHQARAAEAHAARAB0AHQAAABwAGwAAAB0AHQAJABsABgAJAB0AAQAUAB0AHQAUAAYA"),
+"lods": [0.000120351, PackedByteArray("BgAHAAMACgADAAcACAADAAoABgADAAgABwAEAAoABgALAAcABwALAAQABAALAAYACgAMAAgADAAKAAQADAAEAAEABgABAAQACAAMAAIAAgAMAAEAAgANAAgABgAIAA0ADQACAA4ADgACAAEABgANAAUADgAFAA0ABQAOAA8ADwAOAAEABgAFABAADwAQAAUACQAGABAAAQAGAAkAAAAQAA8ACQAQAAAADwABABEACQARAAEADwARAAAAAAARAAkA"), 0.000176241, PackedByteArray("BgAHAAMABwAEAAMABgAEAAcAAgADAAQABgADAAgAAwACAAgABgABAAQAAgAEAAEAAQAGAAkAAAACAAEAAAABAAkAAgAFAAgABQACAAAABgAIAAUACQAFAAAACQAGAAUA"), 0.000223255, PackedByteArray("AQAEAAMAAgADAAQAAQADAAIAAgAEAAEAAAACAAEAAQACAAUABQACAAAAAAABAAUA"), 0.000397879, PackedByteArray("AAABAAIAAAACAAEAAgADAAEAAQADAAIA")],
+"name": "Foods_04",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("2Fv0ukXLHroAAAAAw06Nukh+wjoDJ5K4wU6NOkp+wroDJ5K4/aPkOmSUFDoDJ5I4AAAAAC1o8DoDJ5K4wU0wry1o8LoDJ5I4w06Nukh+wjoDJ5I4wk6NOkl+wjoDJ5I4/KPkOmaUFLoDJ5I4/KPkumiUFDoDJ5I4/aPkOmSUFDoDJ5K4AAAAAC1o8DoDJ5I4/KPkOmaUFLoDJ5K4wU6NOkp+wroDJ5I4wU0wry1o8LoDJ5K4xE6Nukh+wroDJ5K4xE6Nukh+wroDJ5I4/KPkumiUFDoDJ5K4pAWXOi/dzzoAAAAAAAAAAI93ADsAAAAApQWXui7dzzoAAAAAwk6NOkl+wjoDJ5K42lv0OkHLHjoAAAAA2Fv0OkPLHroAAAAAowWXOjHdz7oAAAAAiWw8r493ALsAAAAApgWXui7dz7oAAAAA/KPkumiUFLoDJ5I4/KPkumiUFLoDJ5K42Fv0ukbLHjoAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dvu38"]
+resource_name = "Pizza_02"
+_surfaces = [{
+"aabb": AABB(-0.00186431, -0.00196025, -6.96909e-05, 0.00372862, 0.0039205, 0.000139382),
+"attribute_data": PackedByteArray("WjwxPwoKKz9H1j0/KIwJP0llYD8HHTk/KxNrPwQ/GD/IHU8/3u4DP8gdTz9Puj4/R9Y9PyiMCT9JZWA/J4wJPysTaz8qaio/ZSgzPwI/GD8rE2s/BD8YP8gdTz/e7gM/KxNrPypqKj9JZWA/Bx05P8gdTz9Puj4/R9Y9PwYdOT9H1j0/Bh05P2UoMz8CPxg/Y5VhP5npBz/IHU8/gOkBPy2mPD+Z6Qc/SWVgPyeMCT82/2w/JJ8XPzb/bD8KCis/Y5VhP5W/Oj/IHU8/rL9APyymPD+Vvzo/ZSgzPypqKj9lKDM/KmoqP1o8MT8knxc/"),
+"format": 34359742487,
+"index_count": 168,
+"index_data": PackedByteArray("EgAHAAsACwATABIABgALAAcAFAATAAsACwAGABQABAATABQAEgATAAQAFAABAAQABAAVABIAAwAHABIABgAHAAMAEgAWAAMAEgAVAAoACgAWABIADAAVAAQADAAKABUADAAEAAEAFwAWAAoACgAMABcAAwAWABcABgADAAgAFwAIAAMAFwAMAAIAAgAMAAEADQAIABcABgAIAA0AAgAYABcAFwAYAA0AGAACAA4ADgACAAEABQANABgABgANAAUADgAZABgAGAAZAAUADwAOAAEAGQAOAA8ABgAFABAAEAAFABkAGQAaABAADwAaABkACQAGABAADwABABEACQAQABsAEAAaAAAAAAAaAA8AAAAbABAADwARABwADwAcAAAAHQARAAEAHAARAB0AHQAAABwAGwAAAB0AHQAJABsABgAJAB0AAQAUAB0AHQAUAAYA"),
+"lods": [0.000120351, PackedByteArray("BgAHAAMACgADAAcACAADAAoABgADAAgABwAEAAoABgALAAcABwALAAQABAALAAYACgAMAAgADAAKAAQADAAEAAEABgABAAQACAAMAAIAAgAMAAEAAgANAAgABgAIAA0ADQACAA4ADgACAAEABgANAAUADgAFAA0ABQAOAA8ADwAOAAEABgAFABAADwAQAAUACQAGABAAAQAGAAkAAAAQAA8ACQAQAAAADwABABEACQARAAEADwARAAAAAAARAAkA"), 0.000176241, PackedByteArray("BgAHAAMABwAEAAMABgAEAAcAAgADAAQABgADAAgAAwACAAgABgABAAQAAgAEAAEAAQAGAAkAAAACAAEAAAABAAkAAgAFAAgABQACAAAABgAIAAUACQAFAAAACQAGAAUA"), 0.000223255, PackedByteArray("AQAEAAMAAgADAAQAAQADAAIAAgAEAAEAAAACAAEAAQACAAUABQACAAAAAAABAAUA"), 0.000397879, PackedByteArray("AAABAAIAAAACAAEAAgADAAEAAQADAAIA")],
+"material": SubResource("StandardMaterial3D_o8rv1"),
+"name": "Foods_04",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("2Fv0ukXLHroAAAAAw06Nukh+wjoDJ5K4wU6NOkp+wroDJ5K4/aPkOmSUFDoDJ5I4AAAAAC1o8DoDJ5K4wU0wry1o8LoDJ5I4w06Nukh+wjoDJ5I4wk6NOkl+wjoDJ5I4/KPkOmaUFLoDJ5I4/KPkumiUFDoDJ5I4/aPkOmSUFDoDJ5K4AAAAAC1o8DoDJ5I4/KPkOmaUFLoDJ5K4wU6NOkp+wroDJ5I4wU0wry1o8LoDJ5K4xE6Nukh+wroDJ5K4xE6Nukh+wroDJ5I4/KPkumiUFDoDJ5K4pAWXOi/dzzoAAAAAAAAAAI93ADsAAAAApQWXui7dzzoAAAAAwk6NOkl+wjoDJ5K42lv0OkHLHjoAAAAA2Fv0OkPLHroAAAAAowWXOjHdz7oAAAAAiWw8r493ALsAAAAApgWXui7dz7oAAAAA/KPkumiUFLoDJ5I4/KPkumiUFLoDJ5K42Fv0ukbLHjoAAAAAYx+bYLDWSXlbFsDv3v/oSaPpPhAt7BBAFJvMiP7/is45Hv///v//P/9/xWH+//+/wW9bli3s7r89kFuW3v/nyRSbMnf+/3Sx6mTMiOni/r8y9+nk6eL/P/9/OZ7+//+/MvcVG+niAEA9kKNp3v8WtjkeAAD+//8/WxY+EN7/FzbBb6NpLewPwMwI6eT9/4pO3LUiyu65C1X/f/7//v//PyJKIsrn1fcco+nA7y3s7z+b4GOfa42nVJvgm2BrjVgr3LXcNe659Cr/fwAA/v//PyJK3DXn1Qhj6mQyd+ni/7/MCBUb/v90MWMfY5+w1rUG")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uqocw")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mu0rf"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("4_geqgq")
+
+[node name="Pizza_02" type="MeshInstance3D"]
+transform = Transform3D(250, 1.17165e-06, 5.12145e-14, 0, -1.09278e-05, 250, 1.17165e-06, -250, -1.09278e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_dvu38")
+skeleton = NodePath("")
+
+[node name="Sauce" type="Sprite3D" parent="."]
+transform = Transform3D(0.085, 0, 1.65436e-24, 0, 0.085, 0, -1.65436e-24, 0, 0.085, -8.32343e-26, -3.31855e-12, 7.59198e-05)
+pixel_size = 0.0001
+texture_filter = 0
+texture = ExtResource("2_je5pd")
+
+[node name="Cheese" type="Sprite3D" parent="."]
+transform = Transform3D(0.14, 0, 3.30872e-24, 0, 0.14, 0, -3.30872e-24, 0, 0.14, -9.64535e-26, -3.84559e-12, 8.79773e-05)
+pixel_size = 0.0001
+texture_filter = 0
+texture = ExtResource("3_7s6re")
+
+[node name="Crust" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_mu0rf")

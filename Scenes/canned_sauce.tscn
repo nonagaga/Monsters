@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=4 uid="uid://dm1hwbaut181p"]
+
+[ext_resource type="Script" uid="uid://ckvpj1fem3dfo" path="res://Scenes/selectable.gd" id="1_amgok"]
+[ext_resource type="Texture2D" uid="uid://bqwmeg40xs7lo" path="res://Assets/- Classic 64 Asset Pack 0.6/Food/Materials/food_canned_soup_8.png" id="1_psmlp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnups"]
+albedo_texture = ExtResource("1_psmlp")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_660vm"]
+_surfaces = [{
+"aabb": AABB(-0.0508, -0.0635, -0.0523794, 0.1016, 0.127, 0.1016),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("BgAHAAsABgAMAAcACAALAAcADAAIAAcAAAAGAAsAAAAMAAYAAAALAAIADAAEAAgADQAAAAIADQAMAAAACwAKAAIADQACAAoACQALAAgABAAJAAgACwAOAAoACwAJAA4ADwANAAoADwAKAAUACgAOAAUAEAANAA8AEAAPAAUADAANABAAEAAFAA4ADAARAAQADAAQABEABAARAAkAAQAQAA4AEQAQAAEAAQAOAAMAEQABAAMADgAJAAMAEQADAAkA"),
+"lods": [0.0302018, PackedByteArray("BgAHAAIABgAIAAcACAACAAcABgAJAAgACQACAAgAAAAGAAIABgABAAkABgAAAAEAAgAJAAMAAQADAAkAAAACAAoAAQAAAAoAAgADAAoAAQAFAAMACgADAAUAAQAKAAUA"), 0.0441654, PackedByteArray("AAAEAAIABAADAAIAAAACAAUAAgADAAUABAAAAAEABAABAAMAAQAAAAUAAQAFAAMA"), 0.0469712, PackedByteArray("AAABAAIAAQAAAAIAAQACAAMAAQADAAIA")],
+"name": "Food_Canned_Soup_8",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("dCwAAOAeAABzrAAA//8AAHQs///gHgAAc6z/////AAD//wAAD20AAHAP///3xQAA/38AAAAAAACK0///4B4AAP////8PbQAAjvD///fFAAAAAP//D20AAP9///8AAAAAitMAAOAeAAAAAAAAD20AAItT/////wAAcA8AAPfFAACLUwAA//8AAI7wAAD3xQAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l7ybm"]
+resource_name = "food_canned_soup_8_Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.0508, -0.0635, -0.0523794, 0.1016, 0.127, 0.1016),
+"attribute_data": PackedByteArray("///+/1a5/v/+/2K2VrlitsGAYrbBgP//sdX+/zCdYrYz8NmYA8HrqdDfELV3tRSYzYsBiQKlaLTw8f7/4uNitrHVYrZ0x2K2845itrTG1okY1+mD/L3ZmCzt66lBnA6D8PFituLj/v/i4/7/4uNitrHV/v90x2K2sdVitnTH/v90x/7/Vrlitla5/v9Oq2K2Tqv//06r//9Oq2K2MJ3//zCd///zjmK2MJ1itvOO//9759aJX84QtfDxYrbw8f7/847//7WsAYkMgxSYgJNotBaGOKlssjip"),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("DgAPABgADgAZAA8AGgAQABsAGgAGABAAHAAdAB4AHAAfAB0AIAAhABEAIAAiACEAAQAjAAMAAQAkACMAJQAHACYAJQAnAAcAKAApACoAKAArACkAEwAsABQAFQAsABMALAAVAC0ALQAVAAkALAAtABYAFgAtAAoALAAWAAgAAAAuAAIAAAAvAC4AMAAEABIAMAAFAAQADAAxABcAMgAxAAwAMQAyADMAMwAyADQAMQAzADUANQAzAA0AMQA1AAsA"),
+"lods": [0.0302018, PackedByteArray("DgAPAAIAAAAOAAIADgAQAA8ADgARABAADgABABEAAQADABEAAQAHAAMAAQASAAcAAQAFABIABQAEABIAEwAIABQAFQAIABMACAAVAAkACAAJABYAFgAJAAoAFwAMAA0A"), 0.0441654, PackedByteArray("AAAGAAIABgADAAIABgABAAMAAQAHAAMAAQAFAAcABQAEAAcACAAJAAoACwAMAA0A"), 0.0469712, PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAQAFAAQA")],
+"material": SubResource("StandardMaterial3D_fnups"),
+"name": "Food_Canned_Soup_8",
+"primitive": 3,
+"uv_scale": Vector4(1.9882, 2.00028, 0, 0),
+"vertex_count": 54,
+"vertex_data": PackedByteArray("dCwAAOAekvFzrAAA//8AgHQs///gHpLxc6z/////AIB0LP//4B4P1XQsAADgHg/V//8AAA9tD9VwD///98XAnHQs///gHh0Uc6z/////HRRwD///98UdFP//AAAPbf8/dCwAAOAe/z9zrAAA////P/9/AAAAAJLxitP//+AekvH/////D20P1Y7w///3xcCcAAD//w9tD9X/////D20dFIrT///gHh0UjvD///fFHRQAAP//D20dFP9/AAAAAP8//3///wAAkvGK0wAA4B6S8YrTAADgHg/VitP//+AeD9X//wAAD239uI7w///3xf24/////w9t/biO8AAA98X9uI7wAAD3xcCcc6z/////wJxzrAAA///AnItT/////wCAi1MAAP//AICLUwAA///AnItT/////8CccA8AAPfFwJxwDwAA98X9uAAA//8Pbf24cA////fF/bgAAAAAD239uP9///8AAB0Ui1P/////HRT/f///AACS8f9/AAAAAJLxAAAAAA9tD9WK0wAA4B7/PwAAAAAPbf8/i1MAAP///z9wDwAA98X/P47wAAD3xf8//3/+//9/////f/7//3////9/////f////38AAP9//v/yyecT8snnE/LJ5xMAAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA/3////LJ5xPyyecT8snnE/LJ5xMAAP9//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f////3////9//v//f/7//3////9/////f/7//3/+//9////yyecT8snnE/9//v//f/7//3///wAA/38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_660vm")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fnups"]
+data = PackedVector3Array(0, -0.0635, -0.0524, 0.0332, 0.0635, -0.0401, 0, 0.0635, -0.0524, 0, -0.0635, -0.0524, 0.0332, -0.0635, -0.0401, 0.0332, 0.0635, -0.0401, 0.0332, -0.0635, -0.0401, 0.0508, 0.0635, -0.0091, 0.0332, 0.0635, -0.0401, 0.0332, -0.0635, -0.0401, 0.0508, -0.0635, -0.0091, 0.0508, 0.0635, -0.0091, 0.0508, -0.0635, -0.0091, 0.0447, 0.0635, 0.0262, 0.0508, 0.0635, -0.0091, 0.0508, -0.0635, -0.0091, 0.0447, -0.0635, 0.0262, 0.0447, 0.0635, 0.0262, 0.0447, -0.0635, 0.0262, 0.0176, 0.0635, 0.0492, 0.0447, 0.0635, 0.0262, 0.0447, -0.0635, 0.0262, 0.0176, -0.0635, 0.0492, 0.0176, 0.0635, 0.0492, 0.0176, -0.0635, 0.0492, -0.0176, 0.0635, 0.0492, 0.0176, 0.0635, 0.0492, 0.0176, -0.0635, 0.0492, -0.0176, -0.0635, 0.0492, -0.0176, 0.0635, 0.0492, -0.0176, -0.0635, 0.0492, -0.0447, 0.0635, 0.0262, -0.0176, 0.0635, 0.0492, -0.0176, -0.0635, 0.0492, -0.0447, -0.0635, 0.0262, -0.0447, 0.0635, 0.0262, -0.0447, -0.0635, 0.0262, -0.0508, 0.0635, -0.0091, -0.0447, 0.0635, 0.0262, -0.0447, -0.0635, 0.0262, -0.0508, -0.0635, -0.0091, -0.0508, 0.0635, -0.0091, 0.0508, 0.0635, -0.0091, 0, 0.0635, -0.0524, 0.0332, 0.0635, -0.0401, 0.0447, 0.0635, 0.0262, 0, 0.0635, -0.0524, 0.0508, 0.0635, -0.0091, 0, 0.0635, -0.0524, 0.0447, 0.0635, 0.0262, -0.0176, 0.0635, 0.0492, -0.0176, 0.0635, 0.0492, 0.0447, 0.0635, 0.0262, 0.0176, 0.0635, 0.0492, 0, 0.0635, -0.0524, -0.0176, 0.0635, 0.0492, -0.0508, 0.0635, -0.0091, -0.0508, 0.0635, -0.0091, -0.0176, 0.0635, 0.0492, -0.0447, 0.0635, 0.0262, 0, 0.0635, -0.0524, -0.0508, 0.0635, -0.0091, -0.0332, 0.0635, -0.0401, -0.0332, -0.0635, -0.0401, 0, 0.0635, -0.0524, -0.0332, 0.0635, -0.0401, -0.0332, -0.0635, -0.0401, 0, -0.0635, -0.0524, 0, 0.0635, -0.0524, -0.0508, -0.0635, -0.0091, -0.0332, 0.0635, -0.0401, -0.0508, 0.0635, -0.0091, -0.0508, -0.0635, -0.0091, -0.0332, -0.0635, -0.0401, -0.0332, 0.0635, -0.0401, -0.0332, -0.0635, -0.0401, 0.0332, -0.0635, -0.0401, 0, -0.0635, -0.0524, -0.0508, -0.0635, -0.0091, 0.0332, -0.0635, -0.0401, -0.0332, -0.0635, -0.0401, 0.0332, -0.0635, -0.0401, -0.0508, -0.0635, -0.0091, -0.0176, -0.0635, 0.0492, -0.0176, -0.0635, 0.0492, -0.0508, -0.0635, -0.0091, -0.0447, -0.0635, 0.0262, 0.0332, -0.0635, -0.0401, -0.0176, -0.0635, 0.0492, 0.0447, -0.0635, 0.0262, 0.0447, -0.0635, 0.0262, -0.0176, -0.0635, 0.0492, 0.0176, -0.0635, 0.0492, 0.0332, -0.0635, -0.0401, 0.0447, -0.0635, 0.0262, 0.0508, -0.0635, -0.0091)
+
+[node name="food_canned_soup_8" type="Area3D" node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_amgok")
+mesh = NodePath("Food_Canned_Soup_8")
+
+[node name="Food_Canned_Soup_8" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_l7ybm")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_fnups")

@@ -14,11 +14,13 @@
 [ext_resource type="Script" uid="uid://bsyvmrogtut1v" path="res://Scenes/open_appliance.gd" id="11_6rctg"]
 [ext_resource type="LightmapGIData" uid="uid://ddetqg64e8h2f" path="res://Scenes/shop.lmbake" id="13_dvu38"]
 [ext_resource type="AudioStream" uid="uid://dreurhfcu484l" path="res://Audio/open_fridge.wav" id="14_jhx1v"]
+[ext_resource type="PackedScene" uid="uid://dm1hwbaut181p" path="res://Scenes/canned_sauce.tscn" id="14_n1qjt"]
 [ext_resource type="ArrayMesh" uid="uid://cgs57a1cpekc6" path="res://Assets/Saved Meshes/table.res" id="15_0vsm1"]
 [ext_resource type="Texture2D" uid="uid://dv3crtunglp6a" path="res://Assets/- Classic 64 Asset Pack 0.6/Metal/Materials/metal_grunge_panel_01.png" id="15_3568l"]
 [ext_resource type="AudioStream" uid="uid://dg877kfyx5u6n" path="res://Audio/close_fridge.wav" id="15_dvu38"]
-[ext_resource type="Texture2D" uid="uid://bk4tx4guu5cy4" path="res://Assets/PSX Foods/Foods/Textures/Foods_04_naked.jpg" id="16_1shhe"]
+[ext_resource type="PackedScene" uid="uid://el38jhcsr5vm" path="res://Scenes/pizza.tscn" id="16_1shhe"]
 [ext_resource type="Texture2D" uid="uid://cyu3307jvvdgd" path="res://Assets/PSX Kitchen/Electronics_kitchen/Textures/Kitchen.jpg" id="16_3mbjb"]
+[ext_resource type="PackedScene" uid="uid://bxyxi5c4cvijo" path="res://Scenes/cheese_supply.tscn" id="16_lkkvn"]
 [ext_resource type="AudioStream" uid="uid://bqc24qqa36meu" path="res://Audio/open_oven.wav" id="18_6rctg"]
 [ext_resource type="Script" uid="uid://5e2xbteg6i8d" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="18_m13ki"]
 [ext_resource type="AudioStream" uid="uid://ci8y8fybgm7oj" path="res://Audio/oven_close.wav" id="19_1shhe"]
@@ -26,6 +28,7 @@
 [ext_resource type="LightmapGIData" uid="uid://decfal44vov1y" path="res://Scenes/stove.lmbake" id="20_1shhe"]
 [ext_resource type="Script" uid="uid://b6ykdaf7lknf7" path="res://Scenes/gui_manager.gd" id="20_3mbjb"]
 [ext_resource type="FontFile" uid="uid://c15c43fry41lg" path="res://Fonts/pokemon-emerald.otf" id="20_m13ki"]
+[ext_resource type="Shader" uid="uid://cw4nmo0gp6w57" path="res://Shaders/item_highlight.gdshader" id="26_ik0jt"]
 
 [sub_resource type="Environment" id="Environment_s8dlv"]
 background_mode = 1
@@ -275,47 +278,6 @@ _data = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mbjb"]
 albedo_texture = ExtResource("15_3568l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8rv1"]
-resource_name = "Foods_04"
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("16_1shhe")
-emission_enabled = true
-texture_filter = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_uqocw"]
-_surfaces = [{
-"aabb": AABB(-0.00186431, -0.00196025, -6.96909e-05, 0.00372862, 0.0039205, 0.000139382),
-"format": 34359742465,
-"index_count": 168,
-"index_data": PackedByteArray("EgAHAAsACwATABIABgALAAcAFAATAAsACwAGABQABAATABQAEgATAAQAFAABAAQABAAVABIAAwAHABIABgAHAAMAEgAWAAMAEgAVAAoACgAWABIADAAVAAQADAAKABUADAAEAAEAFwAWAAoACgAMABcAAwAWABcABgADAAgAFwAIAAMAFwAMAAIAAgAMAAEADQAIABcABgAIAA0AAgAYABcAFwAYAA0AGAACAA4ADgACAAEABQANABgABgANAAUADgAZABgAGAAZAAUADwAOAAEAGQAOAA8ABgAFABAAEAAFABkAGQAaABAADwAaABkACQAGABAADwABABEACQAQABsAEAAaAAAAAAAaAA8AAAAbABAADwARABwADwAcAAAAHQARAAEAHAARAB0AHQAAABwAGwAAAB0AHQAJABsABgAJAB0AAQAUAB0AHQAUAAYA"),
-"lods": [0.000120351, PackedByteArray("BgAHAAMACgADAAcACAADAAoABgADAAgABwAEAAoABgALAAcABwALAAQABAALAAYACgAMAAgADAAKAAQADAAEAAEABgABAAQACAAMAAIAAgAMAAEAAgANAAgABgAIAA0ADQACAA4ADgACAAEABgANAAUADgAFAA0ABQAOAA8ADwAOAAEABgAFABAADwAQAAUACQAGABAAAQAGAAkAAAAQAA8ACQAQAAAADwABABEACQARAAEADwARAAAAAAARAAkA"), 0.000176241, PackedByteArray("BgAHAAMABwAEAAMABgAEAAcAAgADAAQABgADAAgAAwACAAgABgABAAQAAgAEAAEAAQAGAAkAAAACAAEAAAABAAkAAgAFAAgABQACAAAABgAIAAUACQAFAAAACQAGAAUA"), 0.000223255, PackedByteArray("AQAEAAMAAgADAAQAAQADAAIAAgAEAAEAAAACAAEAAQACAAUABQACAAAAAAABAAUA"), 0.000397879, PackedByteArray("AAABAAIAAAACAAEAAgADAAEAAQADAAIA")],
-"name": "Foods_04",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 30,
-"vertex_data": PackedByteArray("2Fv0ukXLHroAAAAAw06Nukh+wjoDJ5K4wU6NOkp+wroDJ5K4/aPkOmSUFDoDJ5I4AAAAAC1o8DoDJ5K4wU0wry1o8LoDJ5I4w06Nukh+wjoDJ5I4wk6NOkl+wjoDJ5I4/KPkOmaUFLoDJ5I4/KPkumiUFDoDJ5I4/aPkOmSUFDoDJ5K4AAAAAC1o8DoDJ5I4/KPkOmaUFLoDJ5K4wU6NOkp+wroDJ5I4wU0wry1o8LoDJ5K4xE6Nukh+wroDJ5K4xE6Nukh+wroDJ5I4/KPkumiUFDoDJ5K4pAWXOi/dzzoAAAAAAAAAAI93ADsAAAAApQWXui7dzzoAAAAAwk6NOkl+wjoDJ5K42lv0OkHLHjoAAAAA2Fv0OkPLHroAAAAAowWXOjHdz7oAAAAAiWw8r493ALsAAAAApgWXui7dz7oAAAAA/KPkumiUFLoDJ5I4/KPkumiUFLoDJ5K42Fv0ukbLHjoAAAAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_dvu38"]
-resource_name = "Pizza_02"
-_surfaces = [{
-"aabb": AABB(-0.00186431, -0.00196025, -6.96909e-05, 0.00372862, 0.0039205, 0.000139382),
-"attribute_data": PackedByteArray("WjwxPwoKKz9H1j0/KIwJP0llYD8HHTk/KxNrPwQ/GD/IHU8/3u4DP8gdTz9Puj4/R9Y9PyiMCT9JZWA/J4wJPysTaz8qaio/ZSgzPwI/GD8rE2s/BD8YP8gdTz/e7gM/KxNrPypqKj9JZWA/Bx05P8gdTz9Puj4/R9Y9PwYdOT9H1j0/Bh05P2UoMz8CPxg/Y5VhP5npBz/IHU8/gOkBPy2mPD+Z6Qc/SWVgPyeMCT82/2w/JJ8XPzb/bD8KCis/Y5VhP5W/Oj/IHU8/rL9APyymPD+Vvzo/ZSgzPypqKj9lKDM/KmoqP1o8MT8knxc/"),
-"format": 34359742487,
-"index_count": 168,
-"index_data": PackedByteArray("EgAHAAsACwATABIABgALAAcAFAATAAsACwAGABQABAATABQAEgATAAQAFAABAAQABAAVABIAAwAHABIABgAHAAMAEgAWAAMAEgAVAAoACgAWABIADAAVAAQADAAKABUADAAEAAEAFwAWAAoACgAMABcAAwAWABcABgADAAgAFwAIAAMAFwAMAAIAAgAMAAEADQAIABcABgAIAA0AAgAYABcAFwAYAA0AGAACAA4ADgACAAEABQANABgABgANAAUADgAZABgAGAAZAAUADwAOAAEAGQAOAA8ABgAFABAAEAAFABkAGQAaABAADwAaABkACQAGABAADwABABEACQAQABsAEAAaAAAAAAAaAA8AAAAbABAADwARABwADwAcAAAAHQARAAEAHAARAB0AHQAAABwAGwAAAB0AHQAJABsABgAJAB0AAQAUAB0AHQAUAAYA"),
-"lods": [0.000120351, PackedByteArray("BgAHAAMACgADAAcACAADAAoABgADAAgABwAEAAoABgALAAcABwALAAQABAALAAYACgAMAAgADAAKAAQADAAEAAEABgABAAQACAAMAAIAAgAMAAEAAgANAAgABgAIAA0ADQACAA4ADgACAAEABgANAAUADgAFAA0ABQAOAA8ADwAOAAEABgAFABAADwAQAAUACQAGABAAAQAGAAkAAAAQAA8ACQAQAAAADwABABEACQARAAEADwARAAAAAAARAAkA"), 0.000176241, PackedByteArray("BgAHAAMABwAEAAMABgAEAAcAAgADAAQABgADAAgAAwACAAgABgABAAQAAgAEAAEAAQAGAAkAAAACAAEAAAABAAkAAgAFAAgABQACAAAABgAIAAUACQAFAAAACQAGAAUA"), 0.000223255, PackedByteArray("AQAEAAMAAgADAAQAAQADAAIAAgAEAAEAAAACAAEAAQACAAUABQACAAAAAAABAAUA"), 0.000397879, PackedByteArray("AAABAAIAAAACAAEAAgADAAEAAQADAAIA")],
-"material": SubResource("StandardMaterial3D_o8rv1"),
-"name": "Foods_04",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 30,
-"vertex_data": PackedByteArray("2Fv0ukXLHroAAAAAw06Nukh+wjoDJ5K4wU6NOkp+wroDJ5K4/aPkOmSUFDoDJ5I4AAAAAC1o8DoDJ5K4wU0wry1o8LoDJ5I4w06Nukh+wjoDJ5I4wk6NOkl+wjoDJ5I4/KPkOmaUFLoDJ5I4/KPkumiUFDoDJ5I4/aPkOmSUFDoDJ5K4AAAAAC1o8DoDJ5I4/KPkOmaUFLoDJ5K4wU6NOkp+wroDJ5I4wU0wry1o8LoDJ5K4xE6Nukh+wroDJ5K4xE6Nukh+wroDJ5I4/KPkumiUFDoDJ5K4pAWXOi/dzzoAAAAAAAAAAI93ADsAAAAApQWXui7dzzoAAAAAwk6NOkl+wjoDJ5K42lv0OkHLHjoAAAAA2Fv0OkPLHroAAAAAowWXOjHdz7oAAAAAiWw8r493ALsAAAAApgWXui7dz7oAAAAA/KPkumiUFLoDJ5I4/KPkumiUFLoDJ5K42Fv0ukbLHjoAAAAAYx+bYLDWSXlbFsDv3v/oSaPpPhAt7BBAFJvMiP7/is45Hv///v//P/9/xWH+//+/wW9bli3s7r89kFuW3v/nyRSbMnf+/3Sx6mTMiOni/r8y9+nk6eL/P/9/OZ7+//+/MvcVG+niAEA9kKNp3v8WtjkeAAD+//8/WxY+EN7/FzbBb6NpLewPwMwI6eT9/4pO3LUiyu65C1X/f/7//v//PyJKIsrn1fcco+nA7y3s7z+b4GOfa42nVJvgm2BrjVgr3LXcNe659Cr/fwAA/v//PyJK3DXn1Qhj6mQyd+ni/7/MCBUb/v90MWMfY5+w1rUG")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_uqocw")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0v5yc"]
 resource_name = "Kitchen"
 vertex_color_use_as_albedo = true
@@ -526,16 +488,21 @@ stream = ExtResource("15_dvu38")
 [node name="LightmapGI" type="LightmapGI" parent="Building/Kitchen/FridgeBody"]
 light_data = ExtResource("13_dvu38")
 
+[node name="food_canned_soup_8" parent="Building/Kitchen/FridgeBody" instance=ExtResource("14_n1qjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.475586, -0.297003, 0.194979)
+shader = ExtResource("26_ik0jt")
+
+[node name="cheese_supply" parent="Building/Kitchen/FridgeBody" instance=ExtResource("16_lkkvn")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.29193, -0.609127, -0.00977707)
+
 [node name="Table" type="MeshInstance3D" parent="Building/Kitchen"]
 transform = Transform3D(-5.80554e-08, 0, 1.47055, 0, 1, 0, -1.32815, 0, -6.42799e-08, -6.21761, 1.5373, 0.128771)
 material_override = SubResource("StandardMaterial3D_3mbjb")
 mesh = ExtResource("15_0vsm1")
 skeleton = NodePath("../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
 
-[node name="Pizza_02" type="MeshInstance3D" parent="Building/Kitchen/Table"]
-transform = Transform3D(250, 1.17165e-06, 5.12145e-14, 0, -1.09278e-05, 250, 1.17165e-06, -250, -1.09278e-05, -0.0373017, 0.56635, -0.0929618)
-mesh = SubResource("ArrayMesh_dvu38")
-skeleton = NodePath("")
+[node name="Pizza_02" parent="Building/Kitchen/Table" instance=ExtResource("16_1shhe")]
+transform = Transform3D(250, 1.17165e-06, 5.12144e-14, 0, -1.09278e-05, 250, 1.17165e-06, -250, -1.09278e-05, -0.0373017, 0.56635, -0.0929618)
 
 [node name="Stove_02" type="MeshInstance3D" parent="Building/Kitchen" node_paths=PackedStringArray("shop_manager")]
 transform = Transform3D(-5.6426e-05, -200, -8.74228e-06, 0, -8.74228e-06, 200, -200, 5.6426e-05, 2.46646e-12, -6.58356, 1.67706, -3.52009)
@@ -631,6 +598,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("20_3mbjb")
 shop_manager = NodePath("..")
 ingredientsCam = NodePath("../IngredientsCam")
