@@ -59,8 +59,7 @@ mesh = SubResource("ArrayMesh_dvu38")
 skeleton = NodePath("")
 
 [node name="Sauce" parent="." instance=ExtResource("2_geqgq")]
-transform = Transform3D(21.25, 9.95902e-08, 4.35323e-15, -4.1359e-22, -9.28863e-07, 21.25, 9.95902e-08, -21.25, -9.28863e-07, -4.96308e-24, 0.0189799, 1.11022e-15)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.019862, 0)
 
 [node name="Cheese" parent="." instance=ExtResource("3_mu0rf")]
 transform = Transform3D(18.75, 8.78738e-08, 3.84109e-15, -7.29865e-22, -8.19585e-07, 18.75, 8.78738e-08, -18.75, -8.19585e-07, -4.96308e-24, 0.0235096, 9.99201e-16)

@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cntkqqsce0f4j" path="res://Assets/Pizza Sprites/saucy pizza.png" id="1_icsra"]
 
-[node name="Sauce" type="Sprite3D"]
-transform = Transform3D(0.085, 0, 1.65436e-24, 0, 0.085, 0, -1.65436e-24, 0, 0.085, 0, 0, 0)
+[node name="Node3D" type="Node3D"]
+
+[node name="Sauce" type="Sprite3D" parent="."]
+transform = Transform3D(21.25, 9.95903e-08, 4.35323e-15, 0, -9.28867e-07, 21.25, 9.95903e-08, -21.25, -9.28867e-07, 0, 0, 0)
 pixel_size = 0.0001
 texture_filter = 0
 texture = ExtResource("1_icsra")
