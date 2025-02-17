@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://bhno6a4dxepht"]
+[gd_scene load_steps=59 format=4 uid="uid://bhno6a4dxepht"]
 
 [ext_resource type="Material" uid="uid://dlhip8hbhrg7e" path="res://Materials/ps1_obj.tres" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://43jfsneh17of" path="res://Scenes/shop_handler.gd" id="1_k7yfq"]
@@ -279,6 +279,9 @@ _data = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mbjb"]
 albedo_texture = ExtResource("15_3568l")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xv2t3"]
+size = Vector3(3.44742, 1.12598, 1.08394)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0v5yc"]
 resource_name = "Kitchen"
 vertex_color_use_as_albedo = true
@@ -523,11 +526,37 @@ material_override = SubResource("StandardMaterial3D_3mbjb")
 mesh = ExtResource("15_0vsm1")
 skeleton = NodePath("../../root/@EditorNode@21228/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11457/@VSplitContainer@11109/@HSplitContainer@11111/@HSplitContainer@11113/@Control@11114/@SubViewportContainer@11115/@SubViewport@11116/shop")
 
+[node name="AllowedArea" type="Area3D" parent="Building/Kitchen/Table"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 0
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Building/Kitchen/Table/AllowedArea"]
+transform = Transform3D(1, 0, -2.38032e-13, 0, 1, 0, 3.55271e-15, 0, 1, 0.0279144, 0.937012, -0.148004)
+shape = SubResource("BoxShape3D_xv2t3")
+
 [node name="Pizza_02" parent="Building/Kitchen/Table" instance=ExtResource("16_1shhe")]
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, -0.0333303, 0.526666, -0.0512743)
 
 [node name="PizzaComponent" parent="Building/Kitchen/Table" instance=ExtResource("21_0icju")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, -1.08487, 0.546941, 0)
+topping = 0
+
+[node name="sauce" parent="Building/Kitchen/Table/PizzaComponent/Toppings" index="0"]
+visible = true
+
+[node name="cheese" parent="Building/Kitchen/Table/PizzaComponent/Toppings" index="1"]
+visible = false
+
+[node name="DraggableComponent" parent="Building/Kitchen/Table/PizzaComponent" index="3" node_paths=PackedStringArray("draggable_area")]
+draggable_area = NodePath("../../AllowedArea")
+
+[node name="PizzaComponent2" parent="Building/Kitchen/Table" instance=ExtResource("21_0icju")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, 1.17391, 0.546941, 0)
+
+[node name="DraggableComponent" parent="Building/Kitchen/Table/PizzaComponent2" index="3" node_paths=PackedStringArray("draggable_area")]
+draggable_area = NodePath("../../AllowedArea")
 
 [node name="Stove_02" type="MeshInstance3D" parent="Building/Kitchen" node_paths=PackedStringArray("s_manager")]
 transform = Transform3D(-5.6426e-05, -200, -8.74228e-06, 0, -8.74228e-06, 200, -200, 5.6426e-05, 2.46646e-12, -6.58356, 1.67706, -3.52009)
@@ -535,6 +564,7 @@ mesh = SubResource("ArrayMesh_1shhe")
 skeleton = NodePath("")
 script = ExtResource("11_6rctg")
 s_manager = NodePath("../../..")
+desired_state = 2
 
 [node name="Stove_door_02" type="MeshInstance3D" parent="Building/Kitchen/Stove_02"]
 transform = Transform3D(0.462444, 0, 0, 0, 0.462444, 0, 0, 0, 0.462444, 6.3777e-06, -0.00466246, -0.00289869)
@@ -674,3 +704,11 @@ text = "Deliver"
 [connection signal="pressed" from="GUI/HBoxContainer/PrepareButton" to="GUI" method="_on_prepare_button_pressed"]
 [connection signal="pressed" from="GUI/HBoxContainer/BakeButton" to="GUI" method="_on_bake_button_pressed"]
 [connection signal="pressed" from="GUI/HBoxContainer/DeliverButton" to="GUI" method="_on_deliver_button_pressed"]
+
+[editable path="Building/Kitchen/FridgeBody/food_canned_soup_8"]
+[editable path="Building/Kitchen/Table/PizzaComponent"]
+[editable path="Building/Kitchen/Table/PizzaComponent/Toppings/sauce"]
+[editable path="Building/Kitchen/Table/PizzaComponent/Toppings/cheese"]
+[editable path="Building/Kitchen/Table/PizzaComponent2"]
+[editable path="Building/Kitchen/Table/PizzaComponent2/Toppings/sauce"]
+[editable path="Building/Kitchen/Table/PizzaComponent2/Toppings/cheese"]

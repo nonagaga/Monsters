@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://tsisld4jfoe8" path="res://Assets/Pizza Sprites/new_cheese.png" id="1_rifja"]
 
-[node name="Cheese" type="Sprite3D"]
-transform = Transform3D(0.075, 7.62648e-39, 2.91946e-24, 0, 0.075, -1.95922e-16, -2.91946e-24, 1.95922e-16, 0.075, 0, 0, 0)
+[node name="cheese" type="Node3D"]
+
+[node name="Cheese" type="Sprite3D" parent="."]
+transform = Transform3D(21, 0, 0, 0, -9.17939e-07, -21, 0, 21, -9.17939e-07, 0, 0, 0)
 pixel_size = 0.0001
 texture_filter = 0
 texture = ExtResource("1_rifja")
